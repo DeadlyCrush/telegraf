@@ -1,7 +1,7 @@
 # Labels
 
 This page describes the meaning of the various
-[labels](https://github.com/influxdata/telegraf/labels) we use on the Github
+[labels](https://github.com/DeadlyCrush/telegraf/labels) we use on the Github
 issue tracker.
 
 ## Categories

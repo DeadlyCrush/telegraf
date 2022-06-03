@@ -11,8 +11,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.
@@ -241,7 +241,7 @@ func (*Cassandra) SampleConfig() string {
 func (c *Cassandra) Start(_ telegraf.Accumulator) error {
 	c.Log.Warn("DEPRECATED: The cassandra plugin has been deprecated. " +
 		"Please use the jolokia2 plugin instead. " +
-		"https://github.com/influxdata/telegraf/tree/master/plugins/inputs/jolokia2")
+		"https://github.com/DeadlyCrush/telegraf/tree/master/plugins/inputs/jolokia2")
 	return nil
 }
 

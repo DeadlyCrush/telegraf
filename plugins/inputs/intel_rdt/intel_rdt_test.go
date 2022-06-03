@@ -6,7 +6,7 @@ package intel_rdt
 import (
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/assert"
 )
 

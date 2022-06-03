@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal/snmp"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/internal/snmp"
 	"github.com/sleepinggenius2/gosmi"
 )
 

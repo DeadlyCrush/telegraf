@@ -8,11 +8,11 @@ import (
 	"sort"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/processors"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/filter"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/plugins/processors"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

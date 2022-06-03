@@ -1,4 +1,4 @@
-module github.com/influxdata/telegraf
+module github.com/DeadlyCrush/telegraf
 
 go 1.18
 

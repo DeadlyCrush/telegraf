@@ -5,7 +5,7 @@ import (
 	"bytes"
 	"compress/gzip"
 	"fmt"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -16,13 +16,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/serializers/carbon2"
-	"github.com/influxdata/telegraf/plugins/serializers/graphite"
-	"github.com/influxdata/telegraf/plugins/serializers/prometheus"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/internal"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/carbon2"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/graphite"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/prometheus"
 )
 
 func getMetric() telegraf.Metric {

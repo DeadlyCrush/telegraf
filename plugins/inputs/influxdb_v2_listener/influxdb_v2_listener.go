@@ -14,14 +14,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	tlsint "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/parsers/influx"
-	"github.com/influxdata/telegraf/plugins/parsers/influx/influx_upstream"
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/internal"
+	tlsint "github.com/DeadlyCrush/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/influx"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/influx/influx_upstream"
+	"github.com/DeadlyCrush/telegraf/selfstat"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

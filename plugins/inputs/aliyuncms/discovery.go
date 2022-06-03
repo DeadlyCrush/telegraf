@@ -16,8 +16,8 @@ import (
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/rds"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/slb"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/vpc"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal/limiter"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/internal/limiter"
 	"github.com/pkg/errors"
 )
 

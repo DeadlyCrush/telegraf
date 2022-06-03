@@ -2,12 +2,12 @@ package couchbase
 
 import (
 	"encoding/json"
-	"github.com/influxdata/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/plugins/common/tls"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
 )
 

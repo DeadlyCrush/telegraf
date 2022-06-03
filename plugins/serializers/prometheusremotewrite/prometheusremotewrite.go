@@ -12,8 +12,8 @@ import (
 	"github.com/golang/snappy"
 	"github.com/prometheus/prometheus/prompb"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/serializers/prometheus"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/prometheus"
 )
 
 type MetricKey uint64

@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/common/parallel"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/plugins/common/parallel"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
 )
 

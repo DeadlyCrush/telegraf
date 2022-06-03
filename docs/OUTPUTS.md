@@ -10,7 +10,7 @@ similar constructs.
 - Outputs should call `outputs.Add` in their `init` function to register
   themselves.  See below for a quick example.
 - To be available within Telegraf itself, plugins must add themselves to the
-  `github.com/influxdata/telegraf/plugins/outputs/all/all.go` file.
+  `github.com/DeadlyCrush/telegraf/plugins/outputs/all/all.go` file.
 - Each plugin requires a file called `sample.conf` containing the sample
   configuration  for the plugin in TOML format.
   Please consult the [Sample Config][] page for the latest style guidelines.
@@ -29,8 +29,8 @@ package simpleoutput
 import (
     _ "embed"
 
-    "github.com/influxdata/telegraf"
-    "github.com/influxdata/telegraf/plugins/outputs"
+    "github.com/DeadlyCrush/telegraf"
+    "github.com/DeadlyCrush/telegraf/plugins/outputs"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.
@@ -98,7 +98,7 @@ You should also add the following to your `SampleConfig()`:
   ## Data format to output.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md
+  ## https://github.com/DeadlyCrush/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md
   data_format = "influx"
 ```
 
@@ -116,8 +116,8 @@ flush interval`. This may mean your output is not keeping up with the flow of me
 and you may want to look into enabling compression, reducing the size of your metrics,
 or investigate other reasons why the writes might be taking longer than expected.
 
-[file]: https://github.com/influxdata/telegraf/tree/master/plugins/inputs/file
-[output data formats]: https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md
-[Sample Config]: https://github.com/influxdata/telegraf/blob/master/docs/developers/SAMPLE_CONFIG.md
-[Code Style]: https://github.com/influxdata/telegraf/blob/master/docs/developers/CODE_STYLE.md
-[telegraf.Output]: https://godoc.org/github.com/influxdata/telegraf#Output
+[file]: https://github.com/DeadlyCrush/telegraf/tree/master/plugins/inputs/file
+[output data formats]: https://github.com/DeadlyCrush/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md
+[Sample Config]: https://github.com/DeadlyCrush/telegraf/blob/master/docs/developers/SAMPLE_CONFIG.md
+[Code Style]: https://github.com/DeadlyCrush/telegraf/blob/master/docs/developers/CODE_STYLE.md
+[telegraf.Output]: https://godoc.org/github.com/DeadlyCrush/telegraf#Output

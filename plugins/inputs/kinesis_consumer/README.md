@@ -54,7 +54,7 @@ and creates metrics using one of the supported [input data formats][].
   ## Data format to consume.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
+  ## https://github.com/DeadlyCrush/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
   data_format = "influx"
 
   ##

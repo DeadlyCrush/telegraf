@@ -19,10 +19,10 @@ import (
 	consumer "github.com/harlow/kinesis-consumer"
 	"github.com/harlow/kinesis-consumer/store/ddb"
 
-	"github.com/influxdata/telegraf"
-	internalaws "github.com/influxdata/telegraf/config/aws"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf"
+	internalaws "github.com/DeadlyCrush/telegraf/config/aws"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

@@ -11,13 +11,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/plugins/parsers/csv"
-	"github.com/influxdata/telegraf/plugins/parsers/influx"
-	"github.com/influxdata/telegraf/plugins/parsers/json"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/csv"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/influx"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/json"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 var (

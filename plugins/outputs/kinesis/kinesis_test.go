@@ -11,10 +11,10 @@ import (
 	"github.com/gofrs/uuid"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/plugins/serializers/influx"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/influx"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 const testPartitionKey = "partitionKey"

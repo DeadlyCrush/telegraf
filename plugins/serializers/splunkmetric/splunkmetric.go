@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 type serializer struct {

@@ -5,7 +5,7 @@ reviews, non-trivial changes are rarely accepted on the first pass. It might tak
 until you see a first review so please be patient.
 
 All pull requests should follow the style and best practices in the
-[CONTRIBUTING.md](https://github.com/influxdata/telegraf/blob/master/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/DeadlyCrush/telegraf/blob/master/CONTRIBUTING.md)
 document.
 
 ## Process
@@ -97,7 +97,7 @@ require.Equal(t, lhs, rhs) # good
 The config file is the primary interface and should be carefully scrutinized.
 
 Ensure the [[SampleConfig]] and
-[README](https://github.com/influxdata/telegraf/blob/master/plugins/inputs/EXAMPLE_README.md)
+[README](https://github.com/DeadlyCrush/telegraf/blob/master/plugins/inputs/EXAMPLE_README.md)
 match with the current standards.
 
 READMEs should:

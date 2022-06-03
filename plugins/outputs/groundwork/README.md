@@ -55,4 +55,4 @@ The current version of GroundWork Monitor does not support metrics whose values
 are strings. Such metrics will be skipped and will not be added to the final
 payload. You can find more context in this pull request: [#10255][].
 
-[#10255]: https://github.com/influxdata/telegraf/pull/10255
+[#10255]: https://github.com/DeadlyCrush/telegraf/pull/10255

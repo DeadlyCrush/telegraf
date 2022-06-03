@@ -11,10 +11,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/kinesis/types"
 	"github.com/gofrs/uuid"
 
-	"github.com/influxdata/telegraf"
-	internalaws "github.com/influxdata/telegraf/config/aws"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf"
+	internalaws "github.com/DeadlyCrush/telegraf/config/aws"
+	"github.com/DeadlyCrush/telegraf/plugins/outputs"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

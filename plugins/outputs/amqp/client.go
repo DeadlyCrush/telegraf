@@ -10,7 +10,7 @@ import (
 
 	amqp "github.com/rabbitmq/amqp091-go"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 type ClientConfig struct {

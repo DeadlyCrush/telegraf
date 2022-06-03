@@ -5,9 +5,9 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/influxdata/telegraf"
-	common "github.com/influxdata/telegraf/plugins/common/starlark"
-	"github.com/influxdata/telegraf/plugins/processors"
+	"github.com/DeadlyCrush/telegraf"
+	common "github.com/DeadlyCrush/telegraf/plugins/common/starlark"
+	"github.com/DeadlyCrush/telegraf/plugins/processors"
 	"go.starlark.net/starlark"
 )
 

@@ -4,7 +4,7 @@ import (
 	_ "embed"
 	"net"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/metric"
 )
 
 type v2Root struct {

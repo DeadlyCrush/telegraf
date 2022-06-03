@@ -10,15 +10,15 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/inputs/webhooks/artifactory"
-	"github.com/influxdata/telegraf/plugins/inputs/webhooks/filestack"
-	"github.com/influxdata/telegraf/plugins/inputs/webhooks/github"
-	"github.com/influxdata/telegraf/plugins/inputs/webhooks/mandrill"
-	"github.com/influxdata/telegraf/plugins/inputs/webhooks/papertrail"
-	"github.com/influxdata/telegraf/plugins/inputs/webhooks/particle"
-	"github.com/influxdata/telegraf/plugins/inputs/webhooks/rollbar"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/webhooks/artifactory"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/webhooks/filestack"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/webhooks/github"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/webhooks/mandrill"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/webhooks/papertrail"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/webhooks/particle"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/webhooks/rollbar"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

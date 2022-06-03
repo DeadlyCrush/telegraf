@@ -13,11 +13,11 @@ import (
 	"github.com/influxdata/go-syslog/v3/nontransparent"
 	"github.com/influxdata/go-syslog/v3/rfc5424"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	framing "github.com/influxdata/telegraf/internal/syslog"
-	tlsint "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/outputs"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	framing "github.com/DeadlyCrush/telegraf/internal/syslog"
+	tlsint "github.com/DeadlyCrush/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/plugins/outputs"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

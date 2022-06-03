@@ -5,14 +5,14 @@ orbs:
 
 executors:
   telegraf-ci:
-    working_directory: '/go/src/github.com/influxdata/telegraf'
+    working_directory: '/go/src/github.com/DeadlyCrush/telegraf'
     resource_class: large
     docker:
       - image: 'quay.io/influxdb/telegraf-ci:1.18.3'
     environment:
       GOFLAGS: -p=4
   mac:
-    working_directory: '~/go/src/github.com/influxdata/telegraf'
+    working_directory: '~/go/src/github.com/DeadlyCrush/telegraf'
     resource_class: medium
     macos:
       xcode: 13.2.0
@@ -42,7 +42,7 @@ commands:
       - run: |
           git config --global user.email "telegraf@influxdb.com"
           git config --global user.name "telegraf"
-          git remote add upstream https://github.com/influxdata/telegraf
+          git remote add upstream https://github.com/DeadlyCrush/telegraf
           git fetch upstream
           git rebase upstream/master
   test-go:
@@ -106,7 +106,7 @@ commands:
                 name: 'Saving cache'
                 key: linux-go-<< parameters.cache_version >>-{{ checksum "go.sum" }}
                 paths:
-                  - '~/go/src/github.com/influxdata/telegraf/gotestsum'
+                  - '~/go/src/github.com/DeadlyCrush/telegraf/gotestsum'
       - when:
           condition:
             equal: [ darwin, << parameters.os >> ]
@@ -115,7 +115,7 @@ commands:
                 name: 'Saving cache'
                 key: darwin-go-<< parameters.cache_version >>-{{ checksum "go.sum" }}
                 paths:
-                  - '/go/src/github.com/influxdata/telegraf/gotestsum'
+                  - '/go/src/github.com/DeadlyCrush/telegraf/gotestsum'
                   - '/usr/local/Cellar/go'
                   - '/usr/local/bin/go'
                   - '/usr/local/bin/gofmt'

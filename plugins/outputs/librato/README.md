@@ -31,7 +31,7 @@ Currently, the plugin does not send any associated Point Tags.
   ## Connection timeout.
   # timeout = "5s"
   ## Output source Template (same as graphite buckets)
-  ## see https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md#graphite
+  ## see https://github.com/DeadlyCrush/telegraf/blob/master/docs/DATA_FORMATS_OUTPUT.md#graphite
   ## This template is used in librato's source (not metric's name)
   template = "host"
 ```

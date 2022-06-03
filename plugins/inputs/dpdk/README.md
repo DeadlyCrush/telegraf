@@ -84,7 +84,7 @@ This configuration allows getting metrics for all devices reported via `/ethdev/
 
 Since this configuration will query `/ethdev/link_status` it's recommended to increase timeout to `socket_access_timeout = "10s"`.
 
-The [plugin collecting interval](https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#input-plugins)
+The [plugin collecting interval](https://github.com/DeadlyCrush/telegraf/blob/master/docs/CONFIGURATION.md#input-plugins)
 should be adjusted accordingly (e.g. `interval = "30s"`).
 
 ### Example: Excluding NIC link status from being collected
@@ -173,7 +173,7 @@ via separate sockets. For each plugin instance a unique tag `[inputs.dpdk.tags]`
     dpdk_instance = "l2fwd-cat"
 ```
 
-This utilizes Telegraf's standard capability of [adding custom tags](https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#input-plugins)
+This utilizes Telegraf's standard capability of [adding custom tags](https://github.com/DeadlyCrush/telegraf/blob/master/docs/CONFIGURATION.md#input-plugins)
 to input plugin's measurements.
 
 ## Metrics
@@ -197,7 +197,7 @@ dpdk,host=dpdk-host,dpdk_instance=l3fwd-power,command=/ethdev/stats,params=0 [fi
 
 | Tag | Description |
 |-----|-------------|
-| `host` | hostname of the machine (consult [Telegraf Agent configuration](https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent) for additional details) |
+| `host` | hostname of the machine (consult [Telegraf Agent configuration](https://github.com/DeadlyCrush/telegraf/blob/master/docs/CONFIGURATION.md#agent) for additional details) |
 | `dpdk_instance` | custom tag from `[inputs.dpdk.tags]` (optional) |
 | `command` | executed command (without params) |
 | `params` | command parameter, e.g. for `/ethdev/stats` it is the id of NIC as exposed by `/ethdev/list`. For DPDK app that uses 2 NICs the metrics will output e.g. `params=0`, `params=1`. |

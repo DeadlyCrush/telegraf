@@ -3,7 +3,7 @@ package elasticsearch_query
 import (
 	"fmt"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 	elastic5 "gopkg.in/olivere/elastic.v5"
 )
 

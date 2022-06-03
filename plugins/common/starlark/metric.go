@@ -8,7 +8,7 @@ import (
 
 	"go.starlark.net/starlark"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 type Metric struct {

@@ -16,9 +16,9 @@ import (
 	"github.com/vmware/govmomi/vim25/mo"
 	"github.com/vmware/govmomi/vim25/types"
 
-	"github.com/influxdata/telegraf/config"
-	itls "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/config"
+	itls "github.com/DeadlyCrush/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 var configHeader = `

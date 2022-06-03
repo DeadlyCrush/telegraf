@@ -11,8 +11,8 @@ import (
 	"github.com/testcontainers/testcontainers-go/wait"
 
 	"github.com/gopcua/opcua/ua"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 type OPCTags struct {

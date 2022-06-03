@@ -2,7 +2,7 @@
 // +build !windows
 
 // TODO: Windows - should be enabled for Windows when super asterisk is fixed on Windows
-// https://github.com/influxdata/telegraf/issues/6248
+// https://github.com/DeadlyCrush/telegraf/issues/6248
 
 package exec
 
@@ -15,8 +15,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 const validJSON = `

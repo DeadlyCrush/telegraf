@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 type format string

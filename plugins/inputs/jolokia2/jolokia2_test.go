@@ -8,11 +8,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs/jolokia2/common"
-	"github.com/influxdata/telegraf/plugins/inputs/jolokia2/jolokia2_agent"
-	"github.com/influxdata/telegraf/plugins/inputs/jolokia2/jolokia2_proxy"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/jolokia2/common"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/jolokia2/jolokia2_agent"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/jolokia2/jolokia2_proxy"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/influxdata/toml"
 	"github.com/influxdata/toml/ast"
 )

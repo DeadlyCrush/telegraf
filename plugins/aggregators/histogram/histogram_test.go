@@ -7,10 +7,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	telegrafConfig "github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	telegrafConfig "github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 type fields map[string]interface{}

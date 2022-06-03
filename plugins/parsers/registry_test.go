@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	_ "github.com/influxdata/telegraf/plugins/parsers/all"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	_ "github.com/DeadlyCrush/telegraf/plugins/parsers/all"
 )
 
 func TestRegistry_BackwardCompatibility(t *testing.T) {

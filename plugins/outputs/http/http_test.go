@@ -11,20 +11,20 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/config"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	internalaws "github.com/influxdata/telegraf/config/aws"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/metric"
-	httpconfig "github.com/influxdata/telegraf/plugins/common/http"
-	"github.com/influxdata/telegraf/plugins/common/oauth"
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/plugins/serializers/influx"
-	"github.com/influxdata/telegraf/plugins/serializers/json"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	internalaws "github.com/DeadlyCrush/telegraf/config/aws"
+	"github.com/DeadlyCrush/telegraf/internal"
+	"github.com/DeadlyCrush/telegraf/metric"
+	httpconfig "github.com/DeadlyCrush/telegraf/plugins/common/http"
+	"github.com/DeadlyCrush/telegraf/plugins/common/oauth"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/influx"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/json"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func getMetric() telegraf.Metric {

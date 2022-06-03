@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf/selfstat"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.
@@ -36,7 +36,7 @@ type UDPListener struct {
 	// UDPPacketSize is deprecated, it's only here for legacy support
 	// we now always create 1 max size buffer and then copy only what we need
 	// into the in channel
-	// see https://github.com/influxdata/telegraf/pull/992
+	// see https://github.com/DeadlyCrush/telegraf/pull/992
 	UDPPacketSize int `toml:"udp_packet_size"`
 
 	sync.Mutex
@@ -93,7 +93,7 @@ func (u *UDPListener) Start(acc telegraf.Accumulator) error {
 
 	u.Log.Warn("DEPRECATED: the UDP listener plugin has been deprecated " +
 		"in favor of the socket_listener plugin " +
-		"(https://github.com/influxdata/telegraf/tree/master/plugins/inputs/socket_listener)")
+		"(https://github.com/DeadlyCrush/telegraf/tree/master/plugins/inputs/socket_listener)")
 
 	tags := map[string]string{
 		"address": u.ServiceAddress,

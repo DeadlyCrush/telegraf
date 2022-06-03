@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 type (

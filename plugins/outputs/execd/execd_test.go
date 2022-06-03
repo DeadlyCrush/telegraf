@@ -13,12 +13,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/parsers/influx"
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/influx"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 var now = time.Date(2020, 6, 30, 16, 16, 0, 0, time.UTC)

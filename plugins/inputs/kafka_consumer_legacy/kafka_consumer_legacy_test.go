@@ -6,8 +6,8 @@ import (
 
 	"github.com/Shopify/sarama"
 
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf/testutil"
 
 	"github.com/stretchr/testify/require"
 )

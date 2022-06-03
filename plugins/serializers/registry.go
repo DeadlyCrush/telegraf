@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/serializers/carbon2"
-	"github.com/influxdata/telegraf/plugins/serializers/graphite"
-	"github.com/influxdata/telegraf/plugins/serializers/influx"
-	"github.com/influxdata/telegraf/plugins/serializers/json"
-	"github.com/influxdata/telegraf/plugins/serializers/msgpack"
-	"github.com/influxdata/telegraf/plugins/serializers/nowmetric"
-	"github.com/influxdata/telegraf/plugins/serializers/prometheus"
-	"github.com/influxdata/telegraf/plugins/serializers/prometheusremotewrite"
-	"github.com/influxdata/telegraf/plugins/serializers/splunkmetric"
-	"github.com/influxdata/telegraf/plugins/serializers/wavefront"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/carbon2"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/graphite"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/influx"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/json"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/msgpack"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/nowmetric"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/prometheus"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/prometheusremotewrite"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/splunkmetric"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/wavefront"
 )
 
 // SerializerOutput is an interface for output plugins that are able to

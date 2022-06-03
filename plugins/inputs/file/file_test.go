@@ -2,7 +2,7 @@
 // +build !windows
 
 // TODO: Windows - should be enabled for Windows when super asterisk is fixed on Windows
-// https://github.com/influxdata/telegraf/issues/6248
+// https://github.com/DeadlyCrush/telegraf/issues/6248
 
 package file
 
@@ -14,10 +14,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/plugins/parsers/csv"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/csv"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func TestRefreshFilePaths(t *testing.T) {

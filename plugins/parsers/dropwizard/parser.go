@@ -7,10 +7,10 @@ import (
 
 	"github.com/tidwall/gjson"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal/templating"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/parsers/influx"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/internal/templating"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/influx"
 )
 
 type TimeFunc func() time.Time

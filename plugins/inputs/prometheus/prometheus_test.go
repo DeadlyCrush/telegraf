@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/fields"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 const sampleTextFormat = `# HELP go_gc_duration_seconds A summary of the GC invocation durations.

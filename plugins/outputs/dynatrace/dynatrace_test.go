@@ -14,10 +14,10 @@ import (
 
 	"github.com/dynatrace-oss/dynatrace-metric-utils-go/metric/apiconstants"
 	"github.com/dynatrace-oss/dynatrace-metric-utils-go/metric/dimensions"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
 )
 

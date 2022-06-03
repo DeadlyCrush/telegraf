@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
 )
 

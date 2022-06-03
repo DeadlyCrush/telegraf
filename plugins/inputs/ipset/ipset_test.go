@@ -7,8 +7,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func TestIpset(t *testing.T) {

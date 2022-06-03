@@ -16,11 +16,11 @@ import (
 	"github.com/Azure/azure-kusto-go/kusto/unsafe"
 	"github.com/Azure/go-autorest/autorest/azure/auth"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/plugins/serializers/json"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/plugins/outputs"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/json"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

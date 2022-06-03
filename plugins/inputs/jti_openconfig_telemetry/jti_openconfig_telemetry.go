@@ -16,12 +16,12 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/status"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	internaltls "github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	authentication "github.com/influxdata/telegraf/plugins/inputs/jti_openconfig_telemetry/auth"
-	telemetry "github.com/influxdata/telegraf/plugins/inputs/jti_openconfig_telemetry/oc"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	internaltls "github.com/DeadlyCrush/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	authentication "github.com/DeadlyCrush/telegraf/plugins/inputs/jti_openconfig_telemetry/auth"
+	telemetry "github.com/DeadlyCrush/telegraf/plugins/inputs/jti_openconfig_telemetry/oc"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

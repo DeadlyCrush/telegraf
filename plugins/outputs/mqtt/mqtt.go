@@ -10,12 +10,12 @@ import (
 
 	paho "github.com/eclipse/paho.mqtt.golang"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/internal"
+	"github.com/DeadlyCrush/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/plugins/outputs"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

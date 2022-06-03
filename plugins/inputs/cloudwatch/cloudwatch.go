@@ -16,15 +16,15 @@ import (
 	cwClient "github.com/aws/aws-sdk-go-v2/service/cloudwatch"
 	"github.com/aws/aws-sdk-go-v2/service/cloudwatch/types"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	internalaws "github.com/influxdata/telegraf/config/aws"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/internal/limiter"
-	internalMetric "github.com/influxdata/telegraf/metric"
-	internalProxy "github.com/influxdata/telegraf/plugins/common/proxy"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	internalaws "github.com/DeadlyCrush/telegraf/config/aws"
+	"github.com/DeadlyCrush/telegraf/filter"
+	"github.com/DeadlyCrush/telegraf/internal"
+	"github.com/DeadlyCrush/telegraf/internal/limiter"
+	internalMetric "github.com/DeadlyCrush/telegraf/metric"
+	internalProxy "github.com/DeadlyCrush/telegraf/plugins/common/proxy"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

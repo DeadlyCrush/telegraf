@@ -12,13 +12,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	httpconfig "github.com/influxdata/telegraf/plugins/common/http"
-	"github.com/influxdata/telegraf/plugins/common/oauth"
-	httpplugin "github.com/influxdata/telegraf/plugins/inputs/http"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/plugins/parsers/csv"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	httpconfig "github.com/DeadlyCrush/telegraf/plugins/common/http"
+	"github.com/DeadlyCrush/telegraf/plugins/common/oauth"
+	httpplugin "github.com/DeadlyCrush/telegraf/plugins/inputs/http"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/csv"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func TestHTTPWithJSONFormat(t *testing.T) {

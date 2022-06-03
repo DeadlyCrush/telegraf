@@ -7,8 +7,8 @@ import (
 	"github.com/prometheus/prometheus/prompb"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func TestParse(t *testing.T) {

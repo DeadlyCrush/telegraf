@@ -20,17 +20,17 @@ import (
 
 	"github.com/coreos/go-semver/semver"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/internal/choice"
-	"github.com/influxdata/telegraf/models"
-	"github.com/influxdata/telegraf/plugins/aggregators"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/plugins/parsers/json_v2"
-	"github.com/influxdata/telegraf/plugins/processors"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/internal"
+	"github.com/DeadlyCrush/telegraf/internal/choice"
+	"github.com/DeadlyCrush/telegraf/models"
+	"github.com/DeadlyCrush/telegraf/plugins/aggregators"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/outputs"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/json_v2"
+	"github.com/DeadlyCrush/telegraf/plugins/processors"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
 	"github.com/influxdata/toml"
 	"github.com/influxdata/toml/ast"
 )
@@ -977,7 +977,7 @@ func (c *Config) LoadConfigData(data []byte) error {
 
 // trimBOM trims the Byte-Order-Marks from the beginning of the file.
 // this is for Windows compatibility only.
-// see https://github.com/influxdata/telegraf/issues/1378
+// see https://github.com/DeadlyCrush/telegraf/issues/1378
 func trimBOM(f []byte) []byte {
 	return bytes.TrimPrefix(f, []byte("\xef\xbb\xbf"))
 }

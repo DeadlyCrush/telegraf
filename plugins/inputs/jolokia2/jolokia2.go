@@ -1,11 +1,11 @@
 package jolokia2
 
 import (
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/inputs/jolokia2/common"
-	"github.com/influxdata/telegraf/plugins/inputs/jolokia2/jolokia2_agent"
-	"github.com/influxdata/telegraf/plugins/inputs/jolokia2/jolokia2_proxy"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/jolokia2/common"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/jolokia2/jolokia2_agent"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/jolokia2/jolokia2_proxy"
 )
 
 func init() {

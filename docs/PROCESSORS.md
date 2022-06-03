@@ -8,7 +8,7 @@ This section is for developers who want to create a new processor plugin.
 * Processors should call `processors.Add` in their `init` function to register
   themselves.  See below for a quick example.
 * To be available within Telegraf itself, plugins must add themselves to the
-  `github.com/influxdata/telegraf/plugins/processors/all/all.go` file.
+  `github.com/DeadlyCrush/telegraf/plugins/processors/all/all.go` file.
 * Each plugin requires a file called `sample.conf` containing the sample
   configuration  for the plugin in TOML format.
   Please consult the [Sample Config][] page for the latest style guidelines.
@@ -28,8 +28,8 @@ import (
     _ "embed"
     "fmt"
 
-    "github.com/influxdata/telegraf"
-    "github.com/influxdata/telegraf/plugins/processors"
+    "github.com/DeadlyCrush/telegraf"
+    "github.com/DeadlyCrush/telegraf/plugins/processors"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.
@@ -93,8 +93,8 @@ import (
     _ "embed"
     "fmt"
 
-    "github.com/influxdata/telegraf"
-    "github.com/influxdata/telegraf/plugins/processors"
+    "github.com/DeadlyCrush/telegraf"
+    "github.com/DeadlyCrush/telegraf/plugins/processors"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.
@@ -156,7 +156,7 @@ func init() {
 }
 ```
 
-[Sample Config]: https://github.com/influxdata/telegraf/blob/master/docs/developers/SAMPLE_CONFIG.md
-[Code Style]: https://github.com/influxdata/telegraf/blob/master/docs/developers/CODE_STYLE.md
-[telegraf.Processor]: https://godoc.org/github.com/influxdata/telegraf#Processor
-[telegraf.StreamingProcessor]: https://godoc.org/github.com/influxdata/telegraf#StreamingProcessor
+[Sample Config]: https://github.com/DeadlyCrush/telegraf/blob/master/docs/developers/SAMPLE_CONFIG.md
+[Code Style]: https://github.com/DeadlyCrush/telegraf/blob/master/docs/developers/CODE_STYLE.md
+[telegraf.Processor]: https://godoc.org/github.com/DeadlyCrush/telegraf#Processor
+[telegraf.StreamingProcessor]: https://godoc.org/github.com/DeadlyCrush/telegraf#StreamingProcessor

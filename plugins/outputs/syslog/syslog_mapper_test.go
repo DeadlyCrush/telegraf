@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/metric"
 )
 
 func TestSyslogMapperWithDefaults(t *testing.T) {

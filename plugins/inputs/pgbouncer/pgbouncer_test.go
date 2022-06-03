@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/testcontainers/testcontainers-go/wait"
 
-	"github.com/influxdata/telegraf/plugins/inputs/postgresql"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/postgresql"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func TestPgBouncerGeneratesMetricsIntegration(t *testing.T) {

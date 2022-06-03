@@ -8,8 +8,8 @@ import (
 	"collectd.org/api"
 	"collectd.org/network"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/metric"
 )
 
 const (

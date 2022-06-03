@@ -2,8 +2,8 @@ package yandex_cloud_monitoring
 
 import (
 	"encoding/json"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
 	"io"
 	"net/http"

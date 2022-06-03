@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
 )
 
@@ -393,7 +393,7 @@ func TestFilter_FilterTagsMatches(t *testing.T) {
 
 // TestFilter_FilterNamePassAndDrop used for check case when
 // both parameters were defined
-// see: https://github.com/influxdata/telegraf/issues/2860
+// see: https://github.com/DeadlyCrush/telegraf/issues/2860
 func TestFilter_FilterNamePassAndDrop(t *testing.T) {
 	inputData := []string{"name1", "name2", "name3", "name4"}
 	expectedResult := []bool{false, true, false, false}
@@ -412,7 +412,7 @@ func TestFilter_FilterNamePassAndDrop(t *testing.T) {
 
 // TestFilter_FilterFieldPassAndDrop used for check case when
 // both parameters were defined
-// see: https://github.com/influxdata/telegraf/issues/2860
+// see: https://github.com/DeadlyCrush/telegraf/issues/2860
 func TestFilter_FilterFieldPassAndDrop(t *testing.T) {
 	inputData := []string{"field1", "field2", "field3", "field4"}
 	expectedResult := []bool{false, true, false, false}
@@ -431,7 +431,7 @@ func TestFilter_FilterFieldPassAndDrop(t *testing.T) {
 
 // TestFilter_FilterTagsPassAndDrop used for check case when
 // both parameters were defined
-// see: https://github.com/influxdata/telegraf/issues/2860
+// see: https://github.com/DeadlyCrush/telegraf/issues/2860
 func TestFilter_FilterTagsPassAndDrop(t *testing.T) {
 	inputData := [][]*telegraf.Tag{
 		{{Key: "tag1", Value: "1"}, {Key: "tag2", Value: "3"}},

@@ -11,7 +11,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 
-	"github.com/influxdata/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/plugins/common/tls"
 )
 
 type client struct {

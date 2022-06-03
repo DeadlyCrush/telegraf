@@ -2,7 +2,7 @@ package udp_listener
 
 // This plugin will become officially deprecated in 2.0
 // These tests have been randomly failing the nightly tests, can't remove plugin until breaking changes are allowed to be merged
-// See this issue for more information: https://github.com/influxdata/telegraf/issues/9478
+// See this issue for more information: https://github.com/DeadlyCrush/telegraf/issues/9478
 
 // const (
 // 	testMsg = "cpu_load_short,host=server01 value=12.0 1422568543702900257\n"

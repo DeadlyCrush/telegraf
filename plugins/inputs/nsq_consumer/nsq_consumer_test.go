@@ -14,8 +14,8 @@ import (
 	"github.com/nsqio/go-nsq"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf/plugins/parsers"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 // This test is modeled after the kafka consumer integration test

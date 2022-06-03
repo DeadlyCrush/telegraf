@@ -6,9 +6,9 @@ import (
 
 	"go.starlark.net/starlark"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/aggregators"
-	common "github.com/influxdata/telegraf/plugins/common/starlark"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/aggregators"
+	common "github.com/DeadlyCrush/telegraf/plugins/common/starlark"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

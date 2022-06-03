@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 	"go.starlark.net/lib/math"
 	"go.starlark.net/lib/time"
 	"go.starlark.net/resolve"

@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/docker/go-connections/nat"
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/testcontainers/testcontainers-go/wait"
 
 	"github.com/stretchr/testify/require"

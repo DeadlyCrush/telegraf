@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 // TSCache is a cache of timestamps used to determine the validity of datapoints

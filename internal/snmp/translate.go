@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 	"github.com/sleepinggenius2/gosmi"
 	"github.com/sleepinggenius2/gosmi/types"
 )

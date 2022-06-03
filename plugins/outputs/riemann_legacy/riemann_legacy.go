@@ -10,15 +10,15 @@ import (
 
 	"github.com/amir/raidman"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/outputs"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/outputs"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.
 //go:embed sample.conf
 var sampleConfig string
 
-const deprecationMsg = "Error: this Riemann output plugin will be deprecated in a future release, see https://github.com/influxdata/telegraf/issues/1878 for more details & discussion."
+const deprecationMsg = "Error: this Riemann output plugin will be deprecated in a future release, see https://github.com/DeadlyCrush/telegraf/issues/1878 for more details & discussion."
 
 type Riemann struct {
 	URL       string          `toml:"url"`

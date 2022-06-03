@@ -38,10 +38,10 @@ import (
 	"github.com/gophercloud/gophercloud/openstack/networking/v2/subnets"
 	"github.com/gophercloud/gophercloud/openstack/orchestration/v1/stacks"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal/choice"
-	httpconfig "github.com/influxdata/telegraf/plugins/common/http"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/internal/choice"
+	httpconfig "github.com/DeadlyCrush/telegraf/plugins/common/http"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

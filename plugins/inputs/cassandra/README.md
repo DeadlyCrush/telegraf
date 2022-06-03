@@ -1,6 +1,6 @@
 # Cassandra Input Plugin
 
-**Deprecated in version 1.7**: Please use the [jolokia2](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/jolokia2) plugin with the [cassandra.conf](/plugins/inputs/jolokia2/examples/cassandra.conf) example configuration.
+**Deprecated in version 1.7**: Please use the [jolokia2](https://github.com/DeadlyCrush/telegraf/tree/master/plugins/inputs/jolokia2) plugin with the [cassandra.conf](/plugins/inputs/jolokia2/examples/cassandra.conf) example configuration.
 
 ## Plugin arguments
 
@@ -26,7 +26,7 @@ Cassandra plugin produces one or more measurements for each metric configured, a
   ## DEPRECATED: The cassandra plugin has been deprecated.  Please use the
   ## jolokia2 plugin instead.
   ##
-  ## see https://github.com/influxdata/telegraf/tree/master/plugins/inputs/jolokia2
+  ## see https://github.com/DeadlyCrush/telegraf/tree/master/plugins/inputs/jolokia2
 
   context = "/jolokia/read"
   ## List of cassandra servers exposing jolokia read service

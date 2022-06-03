@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 const defaultFieldName = "value"

@@ -331,7 +331,7 @@ kubernetes_pod_container,container_name=telegraf,namespace=default,node_name=ip-
 kubernetes_statefulset,namespace=default,selector_select1=s1,statefulset_name=etcd replicas_updated=3i,spec_replicas=3i,observed_generation=1i,created=1544101669000000000i,generation=1i,replicas=3i,replicas_current=3i,replicas_ready=3i 1547597616000000000
 ```
 
-[metric filtering]: https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#metric-filtering
+[metric filtering]: https://github.com/DeadlyCrush/telegraf/blob/master/docs/CONFIGURATION.md#metric-filtering
 [retention policy]: https://docs.influxdata.com/influxdb/latest/guides/downsampling_and_retention/
 [tsi]: https://docs.influxdata.com/influxdb/latest/concepts/time-series-index/
 [series cardinality]: https://docs.influxdata.com/influxdb/latest/query_language/spec/#show-cardinality

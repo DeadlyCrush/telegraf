@@ -11,9 +11,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	influxdb "github.com/influxdata/telegraf/plugins/outputs/influxdb_v2"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	influxdb "github.com/DeadlyCrush/telegraf/plugins/outputs/influxdb_v2"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func genURL(u string) *url.URL {

@@ -13,10 +13,10 @@ import (
 
 	_ "time/tzdata" // needed to bundle timezone info into the binary for Windows
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/metric"
-	"github.com/influxdata/telegraf/plugins/parsers"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/internal"
+	"github.com/DeadlyCrush/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
 )
 
 type TimeFunc func() time.Time

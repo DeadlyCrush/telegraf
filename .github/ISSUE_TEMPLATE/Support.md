@@ -17,6 +17,6 @@ Check the documentation for the related plugin including the troubleshooting
 section if available.
 
 https://docs.influxdata.com/telegraf
-https://github.com/influxdata/telegraf/tree/master/docs
+https://github.com/DeadlyCrush/telegraf/tree/master/docs
 
 -->

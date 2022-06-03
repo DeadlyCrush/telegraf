@@ -8,7 +8,7 @@ import (
 	"strconv"
 
 	"github.com/Mellanox/rdmamap"
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 // Gather statistics from our infiniband cards

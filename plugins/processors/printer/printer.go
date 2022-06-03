@@ -5,10 +5,10 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/processors"
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/plugins/serializers/influx"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/processors"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/influx"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

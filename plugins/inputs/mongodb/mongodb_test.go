@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 var server *Server

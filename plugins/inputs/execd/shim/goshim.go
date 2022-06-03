@@ -16,10 +16,10 @@ import (
 	"time"
 
 	"github.com/BurntSushi/toml"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/agent"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/serializers/influx"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/agent"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers/influx"
 )
 
 type empty struct{}
@@ -50,8 +50,8 @@ type Shim struct {
 }
 
 var (
-	oldpkg = "github.com/influxdata/telegraf/plugins/inputs/execd/shim"
-	newpkg = "github.com/influxdata/telegraf/plugins/common/shim"
+	oldpkg = "github.com/DeadlyCrush/telegraf/plugins/inputs/execd/shim"
+	newpkg = "github.com/DeadlyCrush/telegraf/plugins/common/shim"
 )
 
 // New creates a new shim interface

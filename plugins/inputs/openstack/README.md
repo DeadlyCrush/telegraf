@@ -22,7 +22,7 @@ At present this plugin requires the following APIs:
 
 ### Recommendations
 
-Due to the large number of unique tags that this plugin generates, in order to keep the cardinality down it is **highly recommended** to use [modifiers](https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#modifiers) like `tagexclude` to discard unwanted tags.
+Due to the large number of unique tags that this plugin generates, in order to keep the cardinality down it is **highly recommended** to use [modifiers](https://github.com/DeadlyCrush/telegraf/blob/master/docs/CONFIGURATION.md#modifiers) like `tagexclude` to discard unwanted tags.
 
 For deployments with only a small number of VMs and hosts, a small polling interval (e.g. seconds-minutes) is acceptable. For larger deployments, polling a large number of systems will impact performance. Use the `interval` option to change how often the plugin is run:
 

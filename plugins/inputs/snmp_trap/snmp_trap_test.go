@@ -11,9 +11,9 @@ import (
 	"github.com/gosnmp/gosnmp"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/internal/snmp"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/internal/snmp"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 type entry struct {

@@ -16,12 +16,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/parsers/graphite"
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/internal"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers/graphite"
+	"github.com/DeadlyCrush/telegraf/selfstat"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.
@@ -100,7 +100,7 @@ type Statsd struct {
 	// UDPPacketSize is deprecated, it's only here for legacy support
 	// we now always create 1 max size buffer and then copy only what we need
 	// into the in channel
-	// see https://github.com/influxdata/telegraf/pull/992
+	// see https://github.com/DeadlyCrush/telegraf/pull/992
 	UDPPacketSize int `toml:"udp_packet_size" deprecated:"0.12.1;2.0.0;option is ignored"`
 
 	ReadBufferSize int `toml:"read_buffer_size"`
@@ -743,7 +743,7 @@ func parseKeyValue(keyValue string) (key string, val string) {
 	} else if len(split) == 1 {
 		val = split[0]
 	} else if len(split) > 2 {
-		// fix: https://github.com/influxdata/telegraf/issues/10113
+		// fix: https://github.com/DeadlyCrush/telegraf/issues/10113
 		// fix: value has "=" parse error
 		// uri=/service/endpoint?sampleParam={paramValue} parse value key="uri", val="/service/endpoint?sampleParam\={paramValue}"
 		key = split[0]

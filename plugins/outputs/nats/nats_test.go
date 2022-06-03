@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/influxdata/telegraf/plugins/serializers"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
 	"github.com/testcontainers/testcontainers-go/wait"
 )

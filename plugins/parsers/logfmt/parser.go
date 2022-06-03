@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/go-logfmt/logfmt"
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/filter"
+	"github.com/DeadlyCrush/telegraf/metric"
 )
 
 var (

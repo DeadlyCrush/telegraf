@@ -14,10 +14,10 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/plugins/inputs/dpdk/mocks"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/filter"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/dpdk/mocks"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func Test_Init(t *testing.T) {

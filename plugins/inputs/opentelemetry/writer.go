@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/influxdata/influxdb-observability/common"
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 type writeToAccumulator struct {

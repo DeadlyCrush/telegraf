@@ -151,7 +151,7 @@ kubernetes_pod_volume,volume_name=default-token-f7wts,namespace=default,node_nam
 kubernetes_system_container
 ```
 
-[metric filtering]: https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#metric-filtering
+[metric filtering]: https://github.com/DeadlyCrush/telegraf/blob/master/docs/CONFIGURATION.md#metric-filtering
 [retention policy]: https://docs.influxdata.com/influxdb/latest/guides/downsampling_and_retention/
 [tsi]: https://docs.influxdata.com/influxdb/latest/concepts/time-series-index/
 [series cardinality]: https://docs.influxdata.com/influxdb/latest/query_language/spec/#show-cardinality

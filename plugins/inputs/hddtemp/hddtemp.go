@@ -5,9 +5,9 @@ import (
 	_ "embed"
 	"net"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	gohddtemp "github.com/influxdata/telegraf/plugins/inputs/hddtemp/go-hddtemp"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	gohddtemp "github.com/DeadlyCrush/telegraf/plugins/inputs/hddtemp/go-hddtemp"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

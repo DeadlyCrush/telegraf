@@ -11,9 +11,9 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.
@@ -196,7 +196,7 @@ func (j *Jolokia) Gather(acc telegraf.Accumulator) error {
 	if j.jClient == nil {
 		j.Log.Warn("DEPRECATED: the jolokia plugin has been deprecated " +
 			"in favor of the jolokia2 plugin " +
-			"(https://github.com/influxdata/telegraf/tree/master/plugins/inputs/jolokia2)")
+			"(https://github.com/DeadlyCrush/telegraf/tree/master/plugins/inputs/jolokia2)")
 
 		tr := &http.Transport{ResponseHeaderTimeout: time.Duration(j.ResponseHeaderTimeout)}
 		j.jClient = &JolokiaClientImpl{&http.Client{

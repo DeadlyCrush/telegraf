@@ -9,10 +9,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	framing "github.com/influxdata/telegraf/internal/syslog"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	framing "github.com/DeadlyCrush/telegraf/internal/syslog"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func getTestCasesForOctetCounting() []testCaseStream {

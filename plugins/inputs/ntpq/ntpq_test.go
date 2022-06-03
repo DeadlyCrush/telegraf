@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 func TestSingleNTPQ(t *testing.T) {
@@ -212,7 +212,7 @@ func TestBadWhenNTPQ(t *testing.T) {
 }
 
 // TestParserNTPQ - realated to:
-// https://github.com/influxdata/telegraf/issues/2386
+// https://github.com/DeadlyCrush/telegraf/issues/2386
 func TestParserNTPQ(t *testing.T) {
 	tt := tester{
 		ret: []byte(multiParserNTPQ),

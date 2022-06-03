@@ -44,7 +44,7 @@ STDERR from the process will be relayed to Telegraf as errors in the logs.
   ## Data format to consume.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
+  ## https://github.com/DeadlyCrush/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
   data_format = "influx"
 ```
 
@@ -125,5 +125,5 @@ end
   signal = "none"
 ```
 
-[Input Data Formats]: https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
-[inputs.exec]: https://github.com/influxdata/telegraf/blob/master/plugins/inputs/exec/README.md
+[Input Data Formats]: https://github.com/DeadlyCrush/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
+[inputs.exec]: https://github.com/DeadlyCrush/telegraf/blob/master/plugins/inputs/exec/README.md

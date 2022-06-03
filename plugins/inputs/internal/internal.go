@@ -6,10 +6,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/influxdata/telegraf"
-	inter "github.com/influxdata/telegraf/internal"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/selfstat"
+	"github.com/DeadlyCrush/telegraf"
+	inter "github.com/DeadlyCrush/telegraf/internal"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/selfstat"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

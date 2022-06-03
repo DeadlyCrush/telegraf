@@ -2,7 +2,7 @@
 // +build !windows
 
 // TODO: Windows - should be enabled for Windows when super asterisk is fixed on Windows
-// https://github.com/influxdata/telegraf/issues/6248
+// https://github.com/DeadlyCrush/telegraf/issues/6248
 
 package filecount
 
@@ -14,9 +14,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
 )
 

@@ -4,10 +4,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/testutil"
 
 	"github.com/amir/raidman"
-	"github.com/influxdata/telegraf/metric"
+	"github.com/DeadlyCrush/telegraf/metric"
 	"github.com/stretchr/testify/require"
 )
 

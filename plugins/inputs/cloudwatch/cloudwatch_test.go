@@ -11,11 +11,11 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/cloudwatch/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf/config"
-	internalaws "github.com/influxdata/telegraf/config/aws"
-	"github.com/influxdata/telegraf/filter"
-	"github.com/influxdata/telegraf/plugins/common/proxy"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/config"
+	internalaws "github.com/DeadlyCrush/telegraf/config/aws"
+	"github.com/DeadlyCrush/telegraf/filter"
+	"github.com/DeadlyCrush/telegraf/plugins/common/proxy"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 type mockGatherCloudWatchClient struct{}

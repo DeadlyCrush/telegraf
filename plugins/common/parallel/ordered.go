@@ -3,7 +3,7 @@ package parallel
 import (
 	"sync"
 
-	"github.com/influxdata/telegraf"
+	"github.com/DeadlyCrush/telegraf"
 )
 
 type Ordered struct {

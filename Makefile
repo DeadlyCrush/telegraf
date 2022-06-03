@@ -342,7 +342,7 @@ $(include_packages):
 			--input-type dir \
 			--output-type rpm \
 			--vendor InfluxData \
-			--url https://github.com/influxdata/telegraf \
+			--url https://github.com/DeadlyCrush/telegraf \
 			--license MIT \
 			--maintainer support@influxdb.com \
 			--config-files /etc/telegraf/telegraf.conf \
@@ -367,7 +367,7 @@ $(include_packages):
 			--input-type dir \
 			--output-type deb \
 			--vendor InfluxData \
-			--url https://github.com/influxdata/telegraf \
+			--url https://github.com/DeadlyCrush/telegraf \
 			--license MIT \
 			--maintainer support@influxdb.com \
 			--config-files /etc/telegraf/telegraf.conf.sample \

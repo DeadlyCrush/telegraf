@@ -11,11 +11,11 @@ import (
 	"github.com/Shopify/sarama"
 	"github.com/gofrs/uuid"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/common/kafka"
-	"github.com/influxdata/telegraf/plugins/common/proxy"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/common/kafka"
+	"github.com/DeadlyCrush/telegraf/plugins/common/proxy"
+	"github.com/DeadlyCrush/telegraf/plugins/outputs"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

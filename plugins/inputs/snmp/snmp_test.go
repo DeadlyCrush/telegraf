@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/gosnmp/gosnmp"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/internal/snmp"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/internal/snmp"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

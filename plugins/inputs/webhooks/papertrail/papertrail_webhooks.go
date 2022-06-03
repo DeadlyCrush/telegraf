@@ -8,8 +8,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/plugins/common/auth"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/plugins/common/auth"
 )
 
 type PapertrailWebhook struct {

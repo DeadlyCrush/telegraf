@@ -1,7 +1,7 @@
 //go:build !windows
 // +build !windows
 
-// TODO: Windows - should be enabled for Windows when https://github.com/influxdata/telegraf/issues/8451 is fixed
+// TODO: Windows - should be enabled for Windows when https://github.com/DeadlyCrush/telegraf/issues/8451 is fixed
 
 package http_response
 
@@ -18,10 +18,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/config"
-	"github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
 // Receives a list with fields that are expected to be absent

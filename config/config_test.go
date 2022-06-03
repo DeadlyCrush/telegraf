@@ -16,13 +16,13 @@ import (
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/stretchr/testify/require"
 
-	"github.com/influxdata/telegraf"
-	"github.com/influxdata/telegraf/models"
-	"github.com/influxdata/telegraf/plugins/common/tls"
-	"github.com/influxdata/telegraf/plugins/inputs"
-	"github.com/influxdata/telegraf/plugins/outputs"
-	"github.com/influxdata/telegraf/plugins/parsers"
-	_ "github.com/influxdata/telegraf/plugins/parsers/all" // Blank import to have all parsers for testing
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/models"
+	"github.com/DeadlyCrush/telegraf/plugins/common/tls"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs"
+	"github.com/DeadlyCrush/telegraf/plugins/outputs"
+	"github.com/DeadlyCrush/telegraf/plugins/parsers"
+	_ "github.com/DeadlyCrush/telegraf/plugins/parsers/all" // Blank import to have all parsers for testing
 )
 
 func TestConfig_LoadSingleInputWithEnvVars(t *testing.T) {

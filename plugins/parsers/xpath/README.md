@@ -70,7 +70,7 @@ In this configuration mode, you explicitly specify the field and tags you want t
   ## Data format to consume.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
+  ## https://github.com/DeadlyCrush/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
   data_format = "xml"
 
   ## PROTOCOL-BUFFER definitions
@@ -140,7 +140,7 @@ metric.
   ## Data format to consume.
   ## Each data format has its own unique set of configuration options, read
   ## more about them here:
-  ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
+  ## https://github.com/DeadlyCrush/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
   data_format = "xml"
 
   ## PROTOCOL-BUFFER definitions

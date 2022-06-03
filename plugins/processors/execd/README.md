@@ -54,9 +54,9 @@ import (
     "fmt"
     "os"
 
-    "github.com/influxdata/telegraf/metric"
-    "github.com/influxdata/telegraf/plugins/parsers/influx"
-    "github.com/influxdata/telegraf/plugins/serializers"
+    "github.com/DeadlyCrush/telegraf/metric"
+    "github.com/DeadlyCrush/telegraf/plugins/parsers/influx"
+    "github.com/DeadlyCrush/telegraf/plugins/serializers"
 )
 
 func main() {

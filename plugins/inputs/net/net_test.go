@@ -4,9 +4,9 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/influxdata/telegraf/plugins/inputs/netstat"
-	"github.com/influxdata/telegraf/plugins/inputs/system"
-	"github.com/influxdata/telegraf/testutil"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/netstat"
+	"github.com/DeadlyCrush/telegraf/plugins/inputs/system"
+	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/shirou/gopsutil/v3/net"
 	"github.com/stretchr/testify/require"
 )

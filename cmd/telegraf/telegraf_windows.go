@@ -10,7 +10,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/influxdata/telegraf/logger"
+	"github.com/DeadlyCrush/telegraf/logger"
 	"github.com/kardianos/service"
 )
 

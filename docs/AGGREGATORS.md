@@ -8,7 +8,7 @@ This section is for developers who want to create a new aggregator plugin.
 * Aggregators should call `aggregators.Add` in their `init` function to
   register themselves.  See below for a quick example.
 * To be available within Telegraf itself, plugins must add themselves to the
-  `github.com/influxdata/telegraf/plugins/aggregators/all/all.go` file.
+  `github.com/DeadlyCrush/telegraf/plugins/aggregators/all/all.go` file.
 * Each plugin requires a file called `sample.conf` containing the sample configuration
   for the plugin in TOML format.
   Please consult the [Sample Config][] page for the latest style guidelines.
@@ -31,8 +31,8 @@ package min
 import (
     _ "embed"
 
-    "github.com/influxdata/telegraf"
-    "github.com/influxdata/telegraf/plugins/aggregators"
+    "github.com/DeadlyCrush/telegraf"
+    "github.com/DeadlyCrush/telegraf/plugins/aggregators"
 )
 
 // DO NOT REMOVE THE NEXT TWO LINES! This is required to embed the sampleConfig data.

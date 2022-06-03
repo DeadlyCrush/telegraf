@@ -21,7 +21,7 @@ This plugin receives traces, metrics and logs from [OpenTelemetry](https://opent
   # metrics_schema = "prometheus-v1"
 
   ## Optional TLS Config.
-  ## For advanced options: https://github.com/influxdata/telegraf/blob/v1.18.3/docs/TLS.md
+  ## For advanced options: https://github.com/DeadlyCrush/telegraf/blob/v1.18.3/docs/TLS.md
   ##
   ## Set one or more allowed client CA certificate file names to
   ## enable mutually authenticated TLS connections.
