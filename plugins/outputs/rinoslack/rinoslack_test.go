@@ -1,395 +1,102 @@
 package rinoslack
 
 import (
-	"bufio"
-	"compress/gzip"
-	"encoding/json"
-	"net/http"
-	"net/http/httptest"
-	"os"
+	"bytes"
+	"strings"
 	"testing"
 	"time"
 
-	"github.com/Azure/go-autorest/autorest"
-	"github.com/Azure/go-autorest/autorest/adal"
-	"github.com/DeadlyCrush/telegraf"
-	"github.com/DeadlyCrush/telegraf/testutil"
 	"github.com/stretchr/testify/require"
+
+	"github.com/DeadlyCrush/telegraf"
+	"github.com/DeadlyCrush/telegraf/config"
+	"github.com/DeadlyCrush/telegraf/plugins/serializers"
+	"github.com/DeadlyCrush/telegraf/testutil"
 )
 
-func TestAggregate(t *testing.T) {
-	tests := []struct {
-		name     string
-		plugin   *AzureMonitor
-		metrics  []telegraf.Metric
-		addTime  time.Time
-		pushTime time.Time
-		check    func(t *testing.T, plugin *AzureMonitor, metrics []telegraf.Metric)
-	}{
-		{
-			name: "add metric outside window is dropped",
-			plugin: &AzureMonitor{
-				Region:     "test",
-				ResourceID: "/test",
-				Log:        testutil.Logger{},
-			},
-			metrics: []telegraf.Metric{
-				testutil.MustMetric(
-					"cpu",
-					map[string]string{},
-					map[string]interface{}{
-						"value": 42,
-					},
-					time.Unix(0, 0),
-				),
-			},
-			addTime:  time.Unix(3600, 0),
-			pushTime: time.Unix(3600, 0),
-			check: func(t *testing.T, plugin *AzureMonitor, metrics []telegraf.Metric) {
-				require.Equal(t, int64(1), plugin.MetricOutsideWindow.Get())
-				require.Len(t, metrics, 0)
-			},
-		},
-		{
-			name: "metric not sent until period expires",
-			plugin: &AzureMonitor{
-				Region:     "test",
-				ResourceID: "/test",
-				Log:        testutil.Logger{},
-			},
-			metrics: []telegraf.Metric{
-				testutil.MustMetric(
-					"cpu",
-					map[string]string{},
-					map[string]interface{}{
-						"value": 42,
-					},
-					time.Unix(0, 0),
-				),
-			},
-			addTime:  time.Unix(0, 0),
-			pushTime: time.Unix(0, 0),
-			check: func(t *testing.T, plugin *AzureMonitor, metrics []telegraf.Metric) {
-				require.Len(t, metrics, 0)
-			},
-		},
-		{
-			name: "add strings as dimensions",
-			plugin: &AzureMonitor{
-				Region:              "test",
-				ResourceID:          "/test",
-				StringsAsDimensions: true,
-				Log:                 testutil.Logger{},
-			},
-			metrics: []telegraf.Metric{
-				testutil.MustMetric(
-					"cpu",
-					map[string]string{
-						"host": "localhost",
-					},
-					map[string]interface{}{
-						"value":   42,
-						"message": "howdy",
-					},
-					time.Unix(0, 0),
-				),
-			},
-			addTime:  time.Unix(0, 0),
-			pushTime: time.Unix(3600, 0),
-			check: func(t *testing.T, plugin *AzureMonitor, metrics []telegraf.Metric) {
-				expected := []telegraf.Metric{
-					testutil.MustMetric(
-						"cpu-value",
-						map[string]string{
-							"host":    "localhost",
-							"message": "howdy",
-						},
-						map[string]interface{}{
-							"min":   42.0,
-							"max":   42.0,
-							"sum":   42.0,
-							"count": 1,
-						},
-						time.Unix(0, 0),
-					),
-				}
-				testutil.RequireMetricsEqual(t, expected, metrics)
-			},
-		},
-		{
-			name: "add metric to cache and push",
-			plugin: &AzureMonitor{
-				Region:     "test",
-				ResourceID: "/test",
-				Log:        testutil.Logger{},
-				cache:      make(map[time.Time]map[uint64]*aggregate, 36),
-			},
-			metrics: []telegraf.Metric{
-				testutil.MustMetric(
-					"cpu",
-					map[string]string{},
-					map[string]interface{}{
-						"value": 42,
-					},
-					time.Unix(0, 0),
-				),
-			},
-			addTime:  time.Unix(0, 0),
-			pushTime: time.Unix(3600, 0),
-			check: func(t *testing.T, plugin *AzureMonitor, metrics []telegraf.Metric) {
-				expected := []telegraf.Metric{
-					testutil.MustMetric(
-						"cpu-value",
-						map[string]string{},
-						map[string]interface{}{
-							"min":   42.0,
-							"max":   42.0,
-							"sum":   42.0,
-							"count": 1,
-						},
-						time.Unix(0, 0),
-					),
-				}
-
-				testutil.RequireMetricsEqual(t, expected, metrics)
-			},
-		},
-		{
-			name: "added metric are aggregated",
-			plugin: &AzureMonitor{
-				Region:     "test",
-				ResourceID: "/test",
-				Log:        testutil.Logger{},
-				cache:      make(map[time.Time]map[uint64]*aggregate, 36),
-			},
-			metrics: []telegraf.Metric{
-				testutil.MustMetric(
-					"cpu",
-					map[string]string{},
-					map[string]interface{}{
-						"value": 42,
-					},
-					time.Unix(0, 0),
-				),
-				testutil.MustMetric(
-					"cpu",
-					map[string]string{},
-					map[string]interface{}{
-						"value": 84,
-					},
-					time.Unix(0, 0),
-				),
-				testutil.MustMetric(
-					"cpu",
-					map[string]string{},
-					map[string]interface{}{
-						"value": 2,
-					},
-					time.Unix(0, 0),
-				),
-			},
-			addTime:  time.Unix(0, 0),
-			pushTime: time.Unix(3600, 0),
-			check: func(t *testing.T, plugin *AzureMonitor, metrics []telegraf.Metric) {
-				expected := []telegraf.Metric{
-					testutil.MustMetric(
-						"cpu-value",
-						map[string]string{},
-						map[string]interface{}{
-							"min":   2.0,
-							"max":   84.0,
-							"sum":   128.0,
-							"count": 3,
-						},
-						time.Unix(0, 0),
-					),
-				}
-
-				testutil.RequireMetricsEqual(t, expected, metrics)
-			},
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			msiEndpoint, err := adal.GetMSIVMEndpoint()
-			require.NoError(t, err)
-
-			os.Setenv("MSI_ENDPOINT", msiEndpoint)
-			err = tt.plugin.Connect()
-			require.NoError(t, err)
-
-			// Reset globals
-			tt.plugin.MetricOutsideWindow.Set(0)
-
-			tt.plugin.timeFunc = func() time.Time { return tt.addTime }
-			for _, m := range tt.metrics {
-				tt.plugin.Add(m)
-			}
-
-			tt.plugin.timeFunc = func() time.Time { return tt.pushTime }
-			metrics := tt.plugin.Push()
-			tt.plugin.Reset()
-
-			tt.check(t, tt.plugin, metrics)
-		})
-	}
-}
-
-func TestWrite(t *testing.T) {
-	readBody := func(r *http.Request) ([]*azureMonitorMetric, error) {
-		gz, err := gzip.NewReader(r.Body)
-		if err != nil {
-			return nil, err
-		}
-		scanner := bufio.NewScanner(gz)
-
-		azmetrics := make([]*azureMonitorMetric, 0)
-		for scanner.Scan() {
-			line := scanner.Text()
-			var amm azureMonitorMetric
-			err = json.Unmarshal([]byte(line), &amm)
-			if err != nil {
-				return nil, err
-			}
-			azmetrics = append(azmetrics, &amm)
-		}
-
-		return azmetrics, nil
-	}
-
-	ts := httptest.NewServer(http.NotFoundHandler())
-	defer ts.Close()
-
-	url := "http://" + ts.Listener.Addr().String() + "/metrics"
+func TestExec(t *testing.T) {
+	t.Skip("Skipping test due to OS/executable dependencies and race condition when ran as part of a test-all")
 
 	tests := []struct {
 		name    string
-		plugin  *AzureMonitor
+		command []string
+		err     bool
 		metrics []telegraf.Metric
-		handler func(t *testing.T, w http.ResponseWriter, r *http.Request)
 	}{
 		{
-			name: "if not an azure metric nothing is sent",
-			plugin: &AzureMonitor{
-				Region:     "test",
-				ResourceID: "/test",
-				Log:        testutil.Logger{},
-			},
-			metrics: []telegraf.Metric{
-				testutil.MustMetric(
-					"cpu",
-					map[string]string{},
-					map[string]interface{}{
-						"value": 42,
-					},
-					time.Unix(0, 0),
-				),
-			},
-			handler: func(t *testing.T, w http.ResponseWriter, r *http.Request) {
-				t.Fatal("should not call")
-			},
+			name:    "test success",
+			command: []string{"tee"},
+			err:     false,
+			metrics: testutil.MockMetrics(),
 		},
 		{
-			name: "single azure metric",
-			plugin: &AzureMonitor{
-				Region:     "test",
-				ResourceID: "/test",
-				Log:        testutil.Logger{},
-			},
-			metrics: []telegraf.Metric{
-				testutil.MustMetric(
-					"cpu-value",
-					map[string]string{},
-					map[string]interface{}{
-						"min":   float64(42),
-						"max":   float64(42),
-						"sum":   float64(42),
-						"count": int64(1),
-					},
-					time.Unix(0, 0),
-				),
-			},
-			handler: func(t *testing.T, w http.ResponseWriter, r *http.Request) {
-				azmetrics, err := readBody(r)
-				require.NoError(t, err)
-				require.Len(t, azmetrics, 1)
-				w.WriteHeader(http.StatusOK)
-			},
+			name:    "test doesn't accept stdin",
+			command: []string{"sleep", "5s"},
+			err:     true,
+			metrics: testutil.MockMetrics(),
 		},
 		{
-			name: "multiple azure metric",
-			plugin: &AzureMonitor{
-				Region:     "test",
-				ResourceID: "/test",
-				Log:        testutil.Logger{},
-			},
-			metrics: []telegraf.Metric{
-				testutil.MustMetric(
-					"cpu-value",
-					map[string]string{},
-					map[string]interface{}{
-						"min":   float64(42),
-						"max":   float64(42),
-						"sum":   float64(42),
-						"count": int64(1),
-					},
-					time.Unix(0, 0),
-				),
-				testutil.MustMetric(
-					"cpu-value",
-					map[string]string{},
-					map[string]interface{}{
-						"min":   float64(42),
-						"max":   float64(42),
-						"sum":   float64(42),
-						"count": int64(1),
-					},
-					time.Unix(60, 0),
-				),
-			},
-			handler: func(t *testing.T, w http.ResponseWriter, r *http.Request) {
-				azmetrics, err := readBody(r)
-				require.NoError(t, err)
-				require.Len(t, azmetrics, 2)
-				w.WriteHeader(http.StatusOK)
-			},
+			name:    "test command not found",
+			command: []string{"/no/exist", "-h"},
+			err:     true,
+			metrics: testutil.MockMetrics(),
+		},
+		{
+			name:    "test no metrics output",
+			command: []string{"tee"},
+			err:     false,
+			metrics: []telegraf.Metric{},
 		},
 	}
+
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			ts.Config.Handler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-				tt.handler(t, w, r)
-			})
+			e := &Exec{
+				Command: tt.command,
+				Timeout: config.Duration(time.Second),
+				runner:  &CommandRunner{},
+			}
 
-			err := tt.plugin.Connect()
-			require.NoError(t, err)
+			s, _ := serializers.NewInfluxSerializer()
+			e.SetSerializer(s)
 
-			// override real authorizer and write url
-			tt.plugin.auth = autorest.NullAuthorizer{}
-			tt.plugin.url = url
-
-			err = tt.plugin.Write(tt.metrics)
-			require.NoError(t, err)
+			require.NoError(t, e.Connect())
+			require.Equal(t, tt.err, e.Write(tt.metrics) != nil)
 		})
 	}
 }
 
-func TestMain(m *testing.M) {
-	// Set up a fake environment for Authorizer
-	// This used to fake an MSI environment, but since https://github.com/Azure/go-autorest/pull/670/files it's no longer possible,
-	// So we fake a user/password authentication
-	err := os.Setenv("AZURE_CLIENT_ID", "fake")
-	if err != nil {
-		panic(err)
+func TestTruncate(t *testing.T) {
+	tests := []struct {
+		name string
+		buf  *bytes.Buffer
+		len  int
+	}{
+		{
+			name: "long out",
+			buf:  bytes.NewBufferString(strings.Repeat("a", maxStderrBytes+100)),
+			len:  maxStderrBytes + len("..."),
+		},
+		{
+			name: "multiline out",
+			buf:  bytes.NewBufferString("hola\ngato\n"),
+			len:  len("hola") + len("..."),
+		},
 	}
-	err = os.Setenv("AZURE_USERNAME", "fake")
-	if err != nil {
-		panic(err)
+	c := CommandRunner{}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			s := c.truncate(*tt.buf)
+			require.Equal(t, tt.len, len(s))
+		})
 	}
-	err = os.Setenv("AZURE_PASSWORD", "fake")
-	if err != nil {
-		panic(err)
-	}
+}
 
-	os.Exit(m.Run())
+func TestExecDocs(t *testing.T) {
+	e := &Exec{}
+	e.SampleConfig()
+	require.NoError(t, e.Close())
+
+	e = &Exec{runner: &CommandRunner{}}
+	require.NoError(t, e.Close())
 }
